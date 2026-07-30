@@ -1,0 +1,11 @@
+id_cliente,nombre,ciudad,segmento,fecha_registro
+1,Camila Rojas,Bogota,Consumidor Final,2022-11-05
+2,Julian Perez,Medellin,Consumidor Final,2023-01-18
+3,Laura Gomez,Cali,Pyme,2023-02-02
+4,Andres Diaz,Bogota,Consumidor Final,2022-12-20
+5,Sofia Martinez,Barranquilla,Pyme,2023-03-14
+6,Diego Ramirez,Bogota,Consumidor Final,2023-04-01
+7,Valentina Castro,Medellin,Pyme,2023-04-22
+8,Mateo Herrera,Cali,Consumidor Final,2023-05-10
+9,Isabella Suarez,Bogota,Consumidor Final,2023-05-30
+10,Santiago Vargas,Barranquilla,Pyme,2023-06-15
