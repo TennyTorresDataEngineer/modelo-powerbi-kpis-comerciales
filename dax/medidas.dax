@@ -1,0 +1,62 @@
+-- =========================================================
+-- Medidas DAX para el dashboard de KPIs comerciales
+-- Modelo: Ventas (hechos) + Clientes, Productos, Calendario (dimensiones)
+-- =========================================================
+
+-- Tabla de calendario generada con DAX (no se importa como CSV;
+-- es la practica recomendada en Power BI para tener una dimension
+-- de fecha completa y continua, incluso si faltan ventas en algun dia).
+Calendario =
+ADDCOLUMNS (
+    CALENDAR ( DATE ( 2023, 1, 1 ), DATE ( 2023, 12, 31 ) ),
+    "Anio", YEAR ( [Date] ),
+    "NumeroMes", MONTH ( [Date] ),
+    "NombreMes", FORMAT ( [Date], "MMMM" ),
+    "Trimestre", "Q" & FORMAT ( [Date], "Q" ),
+    "DiaSemana", FORMAT ( [Date], "dddd" )
+)
+
+-- ---------------------------------------------------------
+-- KPIs principales
+-- ---------------------------------------------------------
+
+Ventas Totales =
+SUMX (
+    ventas,
+    ventas[cantidad] * RELATED ( productos[precio_unitario] )
+)
+
+Unidades Vendidas =
+SUM ( ventas[cantidad] )
+
+Ticket Promedio =
+DIVIDE ( [Ventas Totales], DISTINCTCOUNT ( ventas[id_venta] ) )
+
+Clientes Activos =
+DISTINCTCOUNT ( ventas[id_cliente] )
+
+Ventas Mismo Periodo Anio Anterior =
+CALCULATE (
+    [Ventas Totales],
+    SAMEPERIODLASTYEAR ( 'Calendario'[Date] )
+)
+
+Crecimiento vs Anio Anterior % =
+DIVIDE (
+    [Ventas Totales] - [Ventas Mismo Periodo Anio Anterior],
+    [Ventas Mismo Periodo Anio Anterior]
+)
+
+Participacion por Categoria % =
+DIVIDE (
+    [Ventas Totales],
+    CALCULATE ( [Ventas Totales], ALL ( productos[categoria] ) )
+)
+
+Clientes con Mas de una Compra =
+COUNTROWS (
+    FILTER (
+        VALUES ( ventas[id_cliente] ),
+        CALCULATE ( DISTINCTCOUNT ( ventas[id_venta] ) ) > 1
+    )
+)
