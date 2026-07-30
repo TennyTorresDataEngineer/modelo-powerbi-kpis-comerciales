@@ -1,0 +1,11 @@
+id_producto,nombre,categoria,precio_unitario
+1,Mouse inalambrico,Tecnologia,45000
+2,Teclado mecanico,Tecnologia,120000
+3,Audifonos bluetooth,Tecnologia,89000
+4,Silla ergonomica,Hogar,350000
+5,Lampara LED,Hogar,60000
+6,Camiseta basica,Moda,35000
+7,Jean clasico,Moda,95000
+8,Crema facial,Belleza,42000
+9,Perfume,Belleza,150000
+10,Cargador USB-C,Tecnologia,30000
