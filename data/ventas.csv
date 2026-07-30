@@ -1,0 +1,49 @@
+id_venta,fecha,id_cliente,id_producto,canal,cantidad
+1,2023-01-08,1,1,Marketplace,2
+2,2023-01-15,2,2,Web Propia,1
+3,2023-01-22,3,4,Redes Sociales,1
+4,2023-02-03,4,6,Web Propia,3
+5,2023-02-10,5,5,Marketplace,2
+6,2023-02-18,1,3,Marketplace,1
+7,2023-02-25,6,9,Redes Sociales,1
+8,2023-03-02,7,7,Web Propia,2
+9,2023-03-09,8,8,Marketplace,1
+10,2023-03-16,2,1,Web Propia,1
+11,2023-03-23,9,10,Marketplace,2
+12,2023-03-30,10,2,Redes Sociales,1
+13,2023-04-06,1,1,Marketplace,1
+14,2023-04-13,3,4,Redes Sociales,1
+15,2023-04-20,4,6,Web Propia,2
+16,2023-04-27,5,5,Marketplace,1
+17,2023-05-04,6,9,Redes Sociales,1
+18,2023-05-11,7,7,Web Propia,1
+19,2023-05-18,8,8,Marketplace,2
+20,2023-05-25,2,3,Web Propia,1
+21,2023-06-01,9,10,Marketplace,3
+22,2023-06-08,10,2,Redes Sociales,1
+23,2023-06-15,1,1,Marketplace,2
+24,2023-06-22,3,4,Redes Sociales,1
+25,2023-07-06,4,6,Web Propia,1
+26,2023-07-13,5,5,Marketplace,2
+27,2023-07-20,6,9,Redes Sociales,1
+28,2023-07-27,7,7,Web Propia,2
+29,2023-08-03,8,8,Marketplace,1
+30,2023-08-10,2,1,Web Propia,2
+31,2023-08-17,9,10,Marketplace,1
+32,2023-08-24,10,2,Redes Sociales,2
+33,2023-09-07,1,3,Marketplace,1
+34,2023-09-14,3,4,Redes Sociales,1
+35,2023-09-21,4,6,Web Propia,3
+36,2023-09-28,5,5,Marketplace,1
+37,2023-10-05,6,9,Redes Sociales,1
+38,2023-10-12,7,7,Web Propia,1
+39,2023-10-19,8,8,Marketplace,2
+40,2023-10-26,9,10,Marketplace,1
+41,2023-11-02,10,2,Redes Sociales,1
+42,2023-11-09,1,1,Marketplace,2
+43,2023-11-16,2,3,Web Propia,1
+44,2023-11-23,3,4,Redes Sociales,2
+45,2023-12-07,4,6,Web Propia,1
+46,2023-12-14,5,5,Marketplace,2
+47,2023-12-21,6,9,Redes Sociales,1
+48,2023-12-28,7,7,Web Propia,1
