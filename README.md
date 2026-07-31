@@ -46,3 +46,30 @@ Para el detalle completo del modelo de datos (tablas, columnas y relaciones) ver
 Un dashboard de KPIs comerciales con visibilidad de ventas totales, ticket promedio, crecimiento interanual y participacion por categoria, construido sobre un modelo de datos limpio y documentado.
 
 _(Espacio para captura de pantalla del dashboard una vez construido en Power BI Desktop)_
+
+
+---
+
+## Actualizacion: Dashboard Real Publicado (Power BI Service)
+
+Ademas del modelo documentado arriba (con datos ficticios, pensado para reconstruirse en Power BI Desktop), este proyecto ahora incluye un dashboard real, construido y publicado en Power BI Service, conectado a datos abiertos oficiales.
+
+### Fuente de datos
+
+Dataset: Historico de Siniestros Viales de Bogota D.C. Entidad: Secretaria Distrital de Movilidad. Portal: datos.gov.co (datos abiertos de Bogota). Licencia: Creative Commons Atribucion (CC BY 4.0). Metodo de conexion: Power BI Service, conector API web, apuntando directamente al CSV publico, sin necesidad de descarga manual.
+
+### Contenido del dashboard (2 paginas)
+
+Pagina 1, resumen general: tarjetas KPI con el total de siniestros y el desglose por gravedad, ademas de graficos de barras por localidad y por ano de ocurrencia. Total de siniestros: 199,146. Con heridos: 67,700. Con muertos: 3,239. Solo danos: 128,207.
+
+Pagina 2, detalle por tipo y ubicacion: grafico circular de participacion por clase de siniestro (choque, atropello, volcamiento, entre otros) y una matriz cruzando localidad por gravedad con totales.
+
+### Capturas de pantalla
+
+![Pagina 1 - Resumen general](dashboard-bogota-pagina1-resumen.png)
+
+![Pagina 2 - Detalle por tipo y ubicacion](dashboard-bogota-pagina2-detalle.png)
+
+### Por que se hizo asi
+
+Power BI Desktop no puede ejecutarse en un navegador, pero Power BI Service si permite crear modelos, medidas y reportes completos desde la web conectandose a fuentes de datos publicas via API. Esto permitio construir un dashboard end-to-end con datos reales y publicarlo, complementando la documentacion tecnica del modelo ficticio de la seccion anterior.
